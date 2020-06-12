@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<!--edge浏览器H5兼容设置-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--360浏览器H5兼容设置-->
+<meta name="renderer" content="webkit" />
+<title>popo酱的博客</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--导入核心文件-->
+<script th:src="@{bootstrap3/js/holder.js}"
+	src="bootstrap3/js/holder.js"></script>
+<link
+	href="bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+<script
+	src="bootstrap3/jquery-1.9.1.min.js"></script>
+<script
+	src="bootstrap3/js/bootstrap.js"></script>
+<!-- 字体图标 -->
+<link rel="stylesheet"
+	href="bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+<link rel="stylesheet" 
+	href="css/layout.css" />
+<script type="text/javascript" 
+	src="js/myjs.js"></script>
+<script type="text/javascript" 
+	src="js/comm.js"></script>
+</head>
+<body>
+	<!--网页最上方的留白-->
+	<header>
+		<div class="container">
+			<span class="pull-right"> <small>Power by</small> <b>Smart</b>Blogs
+			</span>
+		</div>
+	</header>
+	<!--网页标题层-->
+	<div class="index-header">
+		<div class="container">
+			<h1>
+				<b>popo酱的博客</b> <small>——po就是主子，我是po奴才</small>
+			</h1>
+			<!--导航-->
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="home">首页</a></li>
+					<li><a href="list">文章</a></li>
+				</ul>
+				<!--用户名\登出-->
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<p class="navbar-text">用户：admin</p>
+					</li>
+					<li><a href="login.html">登出</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<!--左侧主要内容-->
+			<div class="col-md-offset-2 col-md-8">
+				<div class="bs-docs-section">
+					<h2 class="page-header">
+						<span class="fa fa-list"></span> 发布文章
+					</h2>
+					<form action="send" method="post">
+						<div class="form-group">
+							<label for="title">标题</label> <input type="text"
+								class="form-control" id="title" name="title"
+								placeholder="请输入文章标题">
+						</div>
+						<div class="form-group">
+							<label for="aabstract">摘要</label> <input type="text"
+								class="form-control" id="aabstract" name="abs"
+								placeholder="请输入文章摘要">
+						</div>
+						<div class="form-group">
+							<label for="aabstract">正文</label>
+							<textarea class="form-control" rows="6" id="content"
+								name="content"></textarea>
+						</div>
+						
+						<div class="form-group">
+							<label for="imgName">选择图片</label> <input type="file" id="imgName"
+								name="imgName">
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox" name="putTop" id="putTop">置顶显示
+							</label>
+						</div>
+						<button type="submit" class="btn btn-default">发布</button>
+					</form>
+				</div>
+			</div>
+			<!--左侧内容结束-->
+			<!--右侧内容开始-->
+			
+		</div>
+	</div>
+	<!--网页底部-->
+	<footer class="bs-docs-footer">
+		<div class="container">
+			<b> Copyright © 2018 Tedu.cn All Rights Reserved
+				京ICP备08000853号-56 <a href="http://www.tedu.cn/">达内时代科技集团有限公司</a>
+				版权所有
+			</b> <span class="pull-right"> <b>Version</b> 0.1.0
+			</span>
+		</div>
+	</footer>
+</body>
+
+</html>
